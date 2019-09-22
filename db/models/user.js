@@ -3,10 +3,12 @@ var bcrypt = require('bcrypt-nodejs');
 
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
-    level: DataTypes.STRING,
-    regName: DataTypes.STRING,
+    level: DataTypes.INTEGER,
+    name: DataTypes.STRING,
     email: DataTypes.STRING,
-    password: DataTypes.STRING
+    password: DataTypes.STRING,
+    reset_token: DataTypes.TEXT,
+    token_expired: DataTypes.STRING
   }, {});
   User.beforeSave((user, options) => {
     if (user.changed('password')) {
@@ -23,15 +25,10 @@ module.exports = (sequelize, DataTypes) => {
   };
   User.associate = function(models) {
     // associations can be defined here
-    User.hasOne(models.Witel,{
+    User.hasMany(models.RegionalMaster,{
       foreignKey:'user_id',
       sourceKey:'id',
-      as:'distribution'
-    });
-    User.hasMany(models.Schedule,{
-      foreignKey:'user_id',
-      sourceKey:'id',
-      as:'schedule'
+      as:'regional'
     });
   };
   return User;

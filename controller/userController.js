@@ -78,15 +78,7 @@ class UserController {
                     const string=JSON.stringify(user);
                     const obj=JSON.parse(string);
                     console.log(obj.level);
-                    if(obj.level=="Admin"){
-                        var checkuser=[{
-                                "email":req.body.email,
-                                "token":'JWT ' + token
-                            }];
-                        saveToken(checkuser);
-                        res.json({level: "Admin", token: 'JWT ' + token});
-                        return next();
-                    }else if(obj.level=="Witel"){
+                    if(obj.level=="1"){
                         var checkuser=[{
                                 "email":req.body.email,
                                 "token":'JWT ' + token
@@ -94,13 +86,21 @@ class UserController {
                         saveToken(checkuser);
                         res.json({level: "Witel", token: 'JWT ' + token});
                         return next();
-                    }else if(obj.level=="Kandatel"){
+                    }else if(obj.level=="2"){
                         var checkuser=[{
                                 "email":req.body.email,
                                 "token":'JWT ' + token
                             }];
                         saveToken(checkuser);
-                        res.json({level: "Kandatel", token: 'JWT ' + token});
+                        res.json({level: "Datel", token: 'JWT ' + token});
+                        return next();
+                    }else if(obj.level=="3"){
+                        var checkuser=[{
+                                "email":req.body.email,
+                                "token":'JWT ' + token
+                            }];
+                        saveToken(checkuser);
+                        res.json({level: "Supervisor", token: 'JWT ' + token});
                         return next();
                     }else{
                         var checkuser=[{

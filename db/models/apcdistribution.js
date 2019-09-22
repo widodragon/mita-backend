@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const APCDistribution = sequelize.define('APCDistribution', {
-    witel_id: DataTypes.INTEGER,
+    sales_id: DataTypes.INTEGER,
     nama_lop: DataTypes.STRING,
     nama_segment: DataTypes.STRING,
     nama_kemitraan: DataTypes.STRING,
@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     APCDistribution.hasMany(models.PolyCoordinate,{
       foreignKey:'apc_id',
-      sourceKey:'coordinate',
+      sourceKey:'id',
       as:'polygon'
     });
   };

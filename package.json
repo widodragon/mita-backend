@@ -15,6 +15,7 @@
     "connect-redis": "^3.4.1",
     "convert-csv-to-json": "0.0.14",
     "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
     "express": "^4.16.4",
     "express-session": "^1.16.1",
     "helmet": "^3.16.0",

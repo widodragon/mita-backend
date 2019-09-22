@@ -8,11 +8,11 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      witel_id: {
+      sales_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'Witels',
+          model: 'SalesMasters',
           key: 'id'
         },
       },

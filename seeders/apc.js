@@ -1,6 +1,6 @@
 module.exports=[
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "PERUMAHAN BRD RESIDENCE",
   "nama_segment": "Non APC",
   "nama_kemitraan": "Non Partnership",
@@ -17,7 +17,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "PERUMAHAN PISMA SERUNI ASRI",
   "nama_segment": "Non APC",
   "nama_kemitraan": "Marketing",
@@ -34,7 +34,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "PERUMAHAN GAMA ASRI PEKALONGAN",
   "nama_segment": "Non APC",
   "nama_kemitraan": "Marketing",
@@ -51,7 +51,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "PERUMAHAN SHAPPIRE MEDITERANIA PEKALONGAN",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Marketing",
@@ -68,7 +68,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "PERUMAHAN CITRA GARDEN",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Non Partnership",
@@ -85,7 +85,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "PERUMAHAN GAIA RESIDENCE",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Non Partnership",
@@ -102,7 +102,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "PERUMAHAN JATAYU RESIDENCE",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Non Partnership",
@@ -119,7 +119,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "HUNIAN ISLAMI AR RAYYAN",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Non Partnership",
@@ -136,7 +136,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "SAPPHIRE TOWN HOUSE",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Infrastruktur",
@@ -153,7 +153,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "PERUMAHAN PISMA GARDEN RESIDENCE",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Non Partnership",
@@ -170,7 +170,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "PURI SIDOMUKTI PEKALONGAN",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Non Partnership",
@@ -187,7 +187,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "SHAPPIRE TOWNHOUSE PEKALONGAN",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Non Partnership",
@@ -204,7 +204,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "PERUMAHAN MUTIARA ASRI BATANG",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Non Partnership",
@@ -221,7 +221,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "PERUMAHAN MUTIARA PERMAI",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Non Partnership",
@@ -238,7 +238,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "SINGOKERTEN RESIDENCE BATANG",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Non Partnership",
@@ -255,7 +255,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "KAUMAN RESIDENCE BATANG",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Non Partnership",
@@ -272,7 +272,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "VILLA EXIST SEMPURNA",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Marketing",
@@ -289,7 +289,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "PRIMA GARDEN 2",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Marketing",
@@ -306,7 +306,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "TAMAN CEMARA INDAH",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Marketing",
@@ -323,7 +323,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "GRAND BALE AGUNG PEKALONGAN",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Non Partnership",
@@ -340,7 +340,7 @@ module.exports=[
   "image": ""
  },
  {
-  "witel_id": "1",
+  "sales_id": "1",
   "nama_lop": "PRIMA GARDEN ASRI",
   "nama_segment": "Premium Cluster APC",
   "nama_kemitraan": "Non Partnership",

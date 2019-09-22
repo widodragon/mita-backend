@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Schedule = sequelize.define('Schedule', {
-    user_id: DataTypes.INTEGER,
+    sales_id: DataTypes.INTEGER,
     date: DataTypes.STRING,
     time: DataTypes.STRING,
     mobi: DataTypes.STRING,
@@ -12,11 +12,11 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Schedule.associate = function(models) {
     // associations can be defined here
-    // Schedule.hasOne(models.Vehicle,{
-    //   as:'vehicle',
-    //   foreignKey:'id',
-    //   onDelete: 'CASCADE'
-    // });
+    Schedule.belongsTo(models.SalesMaster,{
+      foreignKey:'sales_id',
+      sourceKey:'id',
+      as:'sf'
+    });
   };
   return Schedule;
 };

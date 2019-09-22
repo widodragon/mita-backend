@@ -1,38 +1,42 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Users', {
+    return queryInterface.createTable('ODPDistributions', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      level: {
+      sales_id: {
+        type: Sequelize.INTEGER,
         allowNull: false,
-        type: Sequelize.INTEGER
+        references: {
+          model: 'SalesMasters',
+          key: 'id'
+        },
       },
       name: {
-        allowNull: false,
         type: Sequelize.STRING
       },
-      email: {
-        allowNull: false,
-        isEmail: true, 
+      lat: {
         type: Sequelize.STRING
       },
-      password: {
-        allowNull: false,
+      lon: {
         type: Sequelize.STRING
       },
-      reset_token: {
-        allowNull: true,
-        type: Sequelize.TEXT
-      },
-      token_expired: {
-        allowNull: true,
+      status_occ: {
         type: Sequelize.STRING
-      },       
+      },
+      service_port: {
+        type: Sequelize.STRING
+      },
+      device_port: {
+        type: Sequelize.STRING
+      },
+      image: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -44,6 +48,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Users');
+    return queryInterface.dropTable('ODPDistributions');
   }
 };

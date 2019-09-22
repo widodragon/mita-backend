@@ -13,6 +13,7 @@ const session = require('express-session')
 const RedisStore = require('connect-redis')(session)
 const passport = require('passport');
 require('./config/passport')(passport);
+require('dotenv').config()
 
 // defining the Express app
 const app = express();
@@ -22,7 +23,7 @@ app.use(session({
   }),
   secret: 'my-strong-secret',
   resave: false,
-  port:db.port,
+  port:process.env.PORT,
   saveUninitialized: false
 }))
 app.use(passport.initialize())
@@ -50,34 +51,45 @@ app.get('/', (req, res) => {
 });
 //adding public folder as static url
 app.use(express.static('public'));
+/*=================================>user api<================================*/
 app.get('/api/v1/user',passport.authenticate('jwt', { session: false}),UserController.index);
 app.post('/api/v1/user',UserController.create);
 app.post('/api/v1/signin',UserController.signin);
 app.get('/api/v1/check/:token',UserController.check);
 app.delete('/api/v1/logout/:token',UserController.logout);
-
+/*===============================>schedule api<==============================*/
+//show schedule available with current date
 app.get('/api/v1/schedule/:token',ScheduleController.index);
+//show schedule available with page and limit
 app.get('/api/v1/schedule/:page/:limit/:token',ScheduleController.pagination);
 app.get('/api/v1/schedule/:search/:token',ScheduleController.search);
-app.post('/api/v1/schedule',ScheduleController.create);
-app.put('/api/v1/schedule/:id',ScheduleController.update);
-app.delete('/api/v1/schedule/:id',ScheduleController.delete);
-
-app.post('/api/v1/witel',DistributionController.create);
+//create schedule
+app.post('/api/v1/schedule/:token',ScheduleController.create);
+app.put('/api/v1/schedule/:id/:token',ScheduleController.update);
+app.delete('/api/v1/schedule/:id/:token',ScheduleController.delete);
+/*==============================>distribution api<===========================*/
+app.post('/api/v1/regional',DistributionController.createRegional);
+app.post('/api/v1/witel',DistributionController.createWitel);
+app.post('/api/v1/datel',DistributionController.createDatel);
+app.post('/api/v1/agency',DistributionController.createAgency);
+app.post('/api/v1/sales',DistributionController.createSales);
 app.post('/api/v1/apc',DistributionController.createAPC);
 app.post('/api/v1/odp',DistributionController.createODP);
 app.post('/api/v1/poly',DistributionController.createPOLY);
+app.post('/api/v1/mobi',DistributionController.createMobi);
 app.get('/api/v1/distribution/:token',DistributionController.index);
 app.get('/api/v1/distribution/:id',DistributionController.detail);
+//show searching odp and apc like in params
 app.get('/api/v1/distribution/:odp/:apc/:token',DistributionController.search);
+//show optimization using k-mean clustering
 app.get('/api/v1/optimization/:token',DistributionController.optimization);
+app.get('/api/v1/mobi/:token',DistributionController.showMobi);
 
 
 // app.get('/api/v1/model/:date',ModelController.index);
 // app.post('/api/v1/model',ModelController.create);
 
 // starting the server
-app.listen(db.port, function () {
-  console.log('your url :'+db.hostname+'/'+db.port);
+app.listen(process.env.PORT, function () {
+  console.log('your url :'+process.env.HOSTNAME+process.env.PORT);
 });
-
